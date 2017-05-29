@@ -1,6 +1,7 @@
 package com.wh2soft.mangalist.viewmodel;
 
-import java.util.Observable;
+import android.databinding.BaseObservable;
 
-public class MangaListViewModel extends Observable {
+public class MangaListViewModel extends BaseObservable {
+
 }
