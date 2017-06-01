@@ -20,8 +20,8 @@ public class MangaItemListViewModel extends BaseObservable {
     }
 
     @BindingAdapter("imageUrl")
-    public static void setImageUrl(ImageView imageView, String url) {
-        Glide.with(imageView.getContext()).load(url).into(imageView);
+    public void setImageUrl(ImageView imageView, String url) {
+        Glide.with(context).load(url).into(imageView);
     }
 
     public void onItemClick(View view) {
@@ -40,8 +40,8 @@ public class MangaItemListViewModel extends BaseObservable {
         return manga.isSaved() ? View.VISIBLE : View.GONE;
     }
 
-    public boolean isMoreThan3Categories() {
-        return getCategories().length > 3;
+    public int isMoreThan3Categories() {
+        return getCategories().length > 3 ? View.VISIBLE : View.GONE;
     }
 
     public String[] getCategories() {
