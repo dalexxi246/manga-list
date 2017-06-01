@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.wh2soft.mangalist.model.Manga;
+import com.wh2soft.mangalist.ui.MangaDetailActivity;
 
 public class MangaItemListViewModel extends BaseObservable {
 
@@ -25,7 +26,7 @@ public class MangaItemListViewModel extends BaseObservable {
     }
 
     public void onItemClick(View view) {
-        // context.startActivity(MangaDetailActivity.launchDetail(view.getContext(), manga));
+        context.startActivity(MangaDetailActivity.launchDetail(view.getContext(), manga));
     }
 
     public String getImgCoverPath() {
